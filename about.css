@@ -1,32 +1,71 @@
- .about-page {
+.about-page {
+	position: relative;
+	overflow-x: hidden;
 	background:
-		radial-gradient(circle at 15% 20%, rgba(205, 227, 220, 0.55), transparent 42%),
-		radial-gradient(circle at 85% 12%, rgba(224, 215, 202, 0.45), transparent 40%),
-		#f5f2eb;
+		radial-gradient(circle at 18% 18%, rgba(116, 191, 214, 0.34), transparent 34%),
+		radial-gradient(circle at 82% 14%, rgba(54, 123, 165, 0.26), transparent 30%),
+		linear-gradient(180deg, #eef8fb 0%, #d9eef6 28%, #b9ddeb 56%, #7eb5ce 100%);
 	min-height: 100vh;
+}
+
+.about-page::before,
+.about-page::after {
+	content: "";
+	position: fixed;
+	left: -10%;
+	right: -10%;
+	height: 18vh;
+	pointer-events: none;
+	background-repeat: repeat-x;
+	background-size: 260px 100%;
+	opacity: 0.35;
+	filter: blur(1px);
+	animation: wave-drift 18s linear infinite;
+}
+
+.about-page::before {
+	top: 14vh;
+	background-image:
+		radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.75) 0 18%, transparent 19%),
+		radial-gradient(circle at 0% 120%, rgba(255, 255, 255, 0.72) 0 18%, transparent 19%),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+	background-size: 140px 100%, 140px 100%, 100% 100%;
+	opacity: 0.28;
+}
+
+.about-page::after {
+	top: 32vh;
+	background-image:
+		radial-gradient(circle at 25% 120%, rgba(255, 255, 255, 0.45) 0 14%, transparent 15%),
+		radial-gradient(circle at 75% 120%, rgba(255, 255, 255, 0.38) 0 14%, transparent 15%),
+		linear-gradient(180deg, rgba(38, 115, 160, 0.18), rgba(38, 115, 160, 0));
+	background-size: 220px 100%, 220px 100%, 100% 100%;
+	opacity: 0.22;
 }
 
 .about-shell {
 	display: grid;
 	grid-template-columns: 1.5fr 1fr;
 	gap: 1.2rem;
+	position: relative;
+	z-index: 1;
 }
 
 .about-card,
 .contact-card {
-	background: rgba(255, 255, 255, 0.8);
-	border: 1px solid #dfd8cc;
+	background: rgba(245, 252, 255, 0.82);
+	border: 1px solid rgba(154, 201, 219, 0.58);
 	border-radius: 20px;
 	padding: 1.35rem;
-	box-shadow: 0 10px 30px rgba(73, 68, 57, 0.08);
-	backdrop-filter: blur(4px);
+	box-shadow: 0 10px 30px rgba(26, 74, 103, 0.12);
+	backdrop-filter: blur(6px);
 }
 
 .about-kicker {
 	font-size: 0.85rem;
 	text-transform: uppercase;
 	letter-spacing: 0.09em;
-	color: #5a665f;
+	color: #2e657c;
 	margin-bottom: 0.5rem;
 }
 
@@ -38,7 +77,7 @@
 }
 
 .about-copy {
-	color: #2f2d29;
+	color: #24485a;
 	margin-bottom: 0.85rem;
 }
 
@@ -62,19 +101,20 @@
 	gap: 0.7rem;
 	width: 100%;
 	padding: 0.65rem 0.75rem;
-	border: 1px solid #e2ddd3;
+	border: 1px solid rgba(154, 201, 219, 0.62);
 	border-radius: 12px;
-	background: #fff;
+	background: rgba(255, 255, 255, 0.86);
 	text-decoration: none;
-	color: #2a2825;
-	transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+	color: #214355;
+	transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 .contact-link:hover {
 	transform: translateY(-1px);
-	border-color: #c9c1b3;
-	box-shadow: 0 8px 16px rgba(59, 53, 45, 0.08);
-	color: #151311;
+	border-color: rgba(76, 156, 191, 0.85);
+	box-shadow: 0 10px 18px rgba(26, 74, 103, 0.12);
+	background: rgba(255, 255, 255, 0.96);
+	color: #12384c;
 }
 
 .icon-wrap {
@@ -84,25 +124,46 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 999px;
-	background: #f2ece2;
-	border: 1px solid #dbd3c6;
+	background: linear-gradient(180deg, #d8f0f8, #b8ddee);
+	border: 1px solid rgba(76, 156, 191, 0.32);
 	flex-shrink: 0;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .icon-wrap svg {
 	width: 1.05rem;
 	height: 1.05rem;
-	fill: #3f3a32;
+	fill: #1f5873;
 }
 
 .icon-wrap i {
 	font-size: 1.05rem;
 	line-height: 1;
-	color: #3f3a32;
+	color: #1f5873;
+}
+
+@keyframes wave-drift {
+	0% {
+		transform: translateX(-2%) translateY(0);
+	}
+
+	50% {
+		transform: translateX(2%) translateY(6px);
+	}
+
+	100% {
+		transform: translateX(-2%) translateY(0);
+	}
 }
 
 @media (max-width: 900px) {
 	.about-shell {
 		grid-template-columns: 1fr;
+	}
+
+	.about-page::before,
+	.about-page::after {
+		height: 14vh;
+		opacity: 0.22;
 	}
 }
