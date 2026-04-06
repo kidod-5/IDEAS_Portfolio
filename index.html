@@ -7,80 +7,178 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
+    <nav class="course-nav" aria-label="Course index">
         <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#photos">Photos</a></li>
-            <li><a href="#about">Me</a></li>
+            <li><a href="/index.html">Projects</a></li>
+            <li><a href="/photo.html">Photos</a></li>
+            <li><a href="/about.html">Me</a></li>
         </ul>
     </nav>
-    <h1>Projects</h1>
-    
-    <h2> Ecological Design</h2>
-    <h3>IDEAS120</h3>
-    <h4>Project 2</h4>
-    <p>This is a simple paragraph for the ecological design project.</p>
-    <h4>Project 3</h4>
-    <p>This is a simple paragraph for the ecological design project.</p>
-    
-    <h4>Project 4</h4>
-    <p>This project tasked us with exploring the relationship between our homes enviroments and the important experiences that shape our daily lives.</p>
-    <figure>
-        <img src="/Portfolio_Assets/120/p4/map2.5.jpg" width="500px" height="300px">
-        <figcaption>
-        Major bridges of Brooklyn highlighting structure and materials.
-        </figcaption>
-    </figure>
 
-    <figure>
-        <img src="/Portfolio_Assets/120/p4/map3.JPG" width="500px" height="400px">
-        <figcaption>
-        Four-layer sectional perspective of Union Square station.
-        </figcaption>
-    </figure>
+    <header class="page-header">
+        <h1>Projects</h1>
+        <p>Select a course to open its projects, then open a project to view the breakdown and media.</p>
+    </header>
 
-    <figure>
-        <img src="/Portfolio_Assets/120/p4/map1.jpg" width="500px" height="300px">
-        <figcaption>
-        Map depicting the area of noise pollution in my neighborhood relative to me.
-        </figcaption>
-    </figure>
+    <main class="course-list">
+        <details class="course" id="ideas120" open>
+            <summary>
+                <span>Ecological Design</span>
+                <strong>IDEAS120</strong>
+            </summary>
+            <div class="course-body">
+                <details class="project" open>
+                    <summary>5 Object Study</summary>
+                    <div class="project-body">
+                        <p>This is a simple paragraph for the ecological design project.</p>
+                    </div>
+                </details>
 
-    <figure>
-        <img src="/Portfolio_Assets/120/p4/allmaps.JPG" width="500px" height="500px">
-        <figcaption>
-        The Project represent 4 maps of that depict relevant places, experiences and objects to my life.
-        </figcaption>
-    </figure>
+                <details class="project">
+                    <summary>Object Recreation</summary>
+                    <div class="project-body">
+                        <p>This is a simple paragraph for the ecological design project.</p>
+                    </div>
+                </details>
 
-    <h2>Introduction to Mechanical Design and Engineering</h2> 
-    <h3>IDEAS170</h3>
-    <embed 
-        src="/Portfolio_Assets/170/Douglas_Kido_hopperportfolio.pdf" 
-        type="application/pdf" 
-        width="50%" 
-        height="400px">
-    <embed 
-        src="/Portfolio_Assets/170/ClimberPortfolio.pdf" 
-        type="application/pdf" 
-        width="50%" 
-        height="400px">
-    
+                <details class="project">
+                    <summary>Home Environment Mapping</summary>
+                    <div class="project-body">
+                        <p>This project explored the relationship between home environments and the experiences that shape daily life.</p>
+                        <div class="media-grid">
+                            <figure>
+                                <img src="Portfolio_Assets/120/p4/map2.5.jpg" alt="Major bridges of Brooklyn highlighting structure and materials.">
+                                <figcaption>Major bridges of Brooklyn highlighting structure and materials.</figcaption>
+                            </figure>
 
-    <h2>Electrical Engineering and Design</h2>
-    <h3>IDEAS175</h3>
+                            <figure>
+                                <img src="Portfolio_Assets/120/p4/map3.JPG" alt="Four-layer sectional perspective of Union Square station.">
+                                <figcaption>Four-layer sectional perspective of Union Square station.</figcaption>
+                            </figure>
 
-    <h2> Introduction to Programming</h2>
-    <h3>COMP112</h3>
-    <a href="https://github.com/kidod-5/Battleship">Check out the the projects on Github!</a>
-    
+                            <figure>
+                                <img src="Portfolio_Assets/120/p4/map1.jpg" alt="Map depicting noise pollution near my neighborhood.">
+                                <figcaption>Map depicting the area of noise pollution in my neighborhood relative to me.</figcaption>
+                            </figure>
 
-    <h2> London: Walking the City </h2>
-    <h3>Transfer Credit</h3>
-    <audio controls>
-        <source src="Portfolio_Assets/cb241204_ESH295_2.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+                            <figure>
+                                <img src="Portfolio_Assets/120/p4/allmaps.JPG" alt="Collection of four maps showing relevant places and experiences.">
+                                <figcaption>The project represents four maps depicting relevant places, experiences, and objects from my life.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="course" id="ideas170">
+            <summary>
+                <span>Introduction to Mechanical Design and Engineering</span>
+                <strong>IDEAS170</strong>
+            </summary>
+            <div class="course-body">
+                <details class="project" open>
+                    <summary>Hopper</summary>
+                    <div class="project-body">
+                        <p>
+                            The Hopper project dictated that given a specific list of materials 
+                            (listed in the presentation), we were tasked with designing a functional jumping
+                            mechanism able of jumping in between 8 and 60 seconds.  My design took advantage 
+                            of the elastic potential energy of the torsion springs when coupled together creating 
+                            a simple and effective jumping mechanism.  I unfortunately had issues with designing the 
+                            base and timer of my hoppering meaning the project did not achieves its intended goal but 
+                            regardless I was able to achieve my goal of making a hopper that could reach the height of 
+                            the ceiling.  I also enjoyed the iterative design process.
+                        </p>
+                        <embed src="Portfolio_Assets/170/p1/Douglas_Kido_hopperportfolio.pdf" type="application/pdf" title="Hopper portfolio PDF">
+                    </div>
+                </details>
+
+                <details class="project">
+                    <summary>Climber</summary>
+                    <div class="project-body">
+                        <p>Climber portfolio presentation documenting the design process and final build.</p>
+                        <embed src="Portfolio_Assets/170/p2/ClimberPortfolio.pdf" type="application/pdf" title="Climber portfolio PDF">
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <!-- <details class="course" id="ideas175">
+            <summary>
+                <span>Introduction to Electrical Engineering and Design</span>
+                <strong>IDEAS175</strong>
+            </summary>
+            <div class="course-body">
+                <details class="project" open>
+                    <summary>Project 1</summary>
+                    <div class="project-body">
+                        <p>This course section does not yet have project media uploaded. Add images or files here when they are ready.</p>
+                    </div>
+                </details>
+            </div>
+        </details> -->
+
+        <details class="course" id="comp112">
+            <summary>
+                <span>Introduction to Programming</span>
+                <strong>COMP112</strong>
+            </summary>
+            <div class="course-body">
+                <details class="project" open>
+                    <summary>Battleship Inline Simulation</summary>
+                    <div class="project-body">
+                        <p>
+                            For my final project I opted to recreate a game that I used to enjoy as a kid.  
+                            Battleship was a favorite of mine and I felt it fit the necessary complexity I was 
+                            aiming for in my game.  From there I decided to focus on creating the main components 
+                            of the game.
+                        </p>
+                        <img src = "Portfolio_Assets/112/lists.png" alt="Screenshot of the Battleship inline simulation project.">
+                        <p>
+                            The first step was figuring out how to represent the game board and the ships.  I 
+                            decided to use lists to represent the game board and the ships, which allowed me 
+                            to easily manipulate the game state and check for hits and misses.
+                        </p>
+                        <img src = "Portfolio_Assets/112/create_ship.png" alt="Another screenshot of the Battleship inline simulation project.">
+                        <p>
+                            Then I focused on functions for ship generation, allowing for dynamic ship generation 
+                            but checking for valid and non-overlapping placements.  
+                        </p>
+                        <img src = "Portfolio_Assets/112/run_ship.png" alt="Yet another screenshot of the Battleship inline simulation project.">
+                        <p>
+                            There are additional functions for different ship types, checking for hits and misses 
+                            and checking the game over condition but all of these are neatly wrapped into a game loop 
+                            that terminates once a win for the AI or player is detected.
+                        </p>
+                        <p>Overall this project was foundational in my understanding of game development and top down programming with 
+                            some object orirented principles.
+                        </p>
+                        <a href="https://github.com/kidod-5/Battleship">Check out the project on GitHub</a>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="course" id="transfer-credit">
+            <summary>
+                <span>London: Walking the City</span>
+                <strong>Transfer Credit</strong>
+            </summary>
+            <div class="course-body">
+                <details class="project" open>
+                    <summary>Shoreditch and Brick Lane Podcast</summary>
+                    <div class="project-body">
+                        <p>Audio reflection from the course.</p>
+                        <audio controls>
+                            <source src="Portfolio_Assets/cb241204_ESH295_2.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </details>
+            </div>
+        </details>
+    </main>
 
 
 </body>
