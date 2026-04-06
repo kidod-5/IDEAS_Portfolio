@@ -95,6 +95,12 @@
 	fill: #3f3a32;
 }
 
+.icon-wrap i {
+	font-size: 1.05rem;
+	line-height: 1;
+	color: #3f3a32;
+}
+
 @media (max-width: 900px) {
 	.about-shell {
 		grid-template-columns: 1fr;
