@@ -1,0 +1,72 @@
+.photo-page {
+	background:
+		radial-gradient(circle at 22% 18%, rgba(177, 213, 209, 0.26), transparent 40%),
+		radial-gradient(circle at 88% 14%, rgba(245, 219, 186, 0.32), transparent 42%),
+		#0f1820;
+	color: #d6e1de;
+	min-height: 100vh;
+}
+
+.photo-page .course-nav {
+	background: rgba(18, 31, 40, 0.55);
+	border-color: #28414f;
+}
+
+.photo-page .course-nav a {
+	background: #142430;
+	border-color: #2a4958;
+	color: #d6e8e2;
+}
+
+.soon-shell {
+	padding: 1.2rem;
+	border-radius: 20px;
+	border: 1px solid #2a4351;
+	background: linear-gradient(180deg, rgba(12, 22, 30, 0.94), rgba(9, 17, 24, 0.98));
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+	overflow-x: auto;
+}
+
+.ascii-soon {
+	margin: 0;
+	font-family: "Courier New", Courier, monospace;
+	font-size: clamp(0.34rem, 1vw, 0.7rem);
+	line-height: 1.12;
+	color: #d9f5ea;
+	text-shadow:
+		0 0 10px rgba(130, 241, 220, 0.6),
+		2px 2px 0 #4a6a72,
+		4px 4px 0 #2d434c,
+		6px 6px 0 #1d2d34;
+	animation: pulse-flash 1.25s steps(1, end) infinite;
+	white-space: pre;
+}
+
+.soon-note {
+	margin-top: 0.9rem;
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 0.82rem;
+	color: #99b5ae;
+}
+
+@keyframes pulse-flash {
+	0%,
+	18%,
+	22%,
+	52%,
+	56%,
+	100% {
+		opacity: 1;
+		filter: brightness(1.08);
+	}
+
+	19%,
+	21%,
+	53%,
+	55% {
+		opacity: 0.34;
+		filter: brightness(0.72);
+	}
+}
