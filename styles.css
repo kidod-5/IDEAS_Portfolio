@@ -29,6 +29,15 @@ body > * {
 	backdrop-filter: blur(8px);
 }
 
+.course-nav ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin: 0;
+	padding: 0;
+}
+
 .course-nav a {
 	text-decoration: none;
 	padding: 0.4rem 0.8rem;
@@ -122,6 +131,38 @@ details[open] > summary {
 	margin-top: 1rem;
 }
 
+.media-grid figure {
+	margin: 0;
+	height: 100%;
+}
+
+.photo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 0.85rem;
+	margin-top: 0.85rem;
+}
+
+.photo-grid img,
+.photo-grid video {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: contain;
+	background: #f3ede2;
+	border: 1px solid #e3dbcf;
+	border-radius: 12px;
+	padding: 0.2rem;
+}
+
+.project-body > img,
+.project-body > video {
+	margin: 0.8rem 0 0;
+	border: 1px solid #e3dbcf;
+	border-radius: 12px;
+	background: #f3ede2;
+	padding: 0.2rem;
+}
+
 h1,
 h2,
 h3,
@@ -174,7 +215,8 @@ figure {
 
 img,
 embed,
-audio {
+audio,
+video {
 	display: block;
 	width: 100%;
 	max-width: 100%;
@@ -222,6 +264,10 @@ a:hover {
 		border-radius: 20px;
 	}
 
+	.photo-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
 	summary {
 		align-items: flex-start;
 		flex-direction: column;
@@ -233,5 +279,11 @@ a:hover {
 
 	embed {
 		min-height: 380px;
+	}
+}
+
+@media (max-width: 460px) {
+	.photo-grid {
+		grid-template-columns: 1fr;
 	}
 }
