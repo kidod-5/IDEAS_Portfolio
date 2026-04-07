@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Rajdhani:wght@400;500;600&display=swap");
+
 * {
 	box-sizing: border-box;
 }
@@ -253,6 +255,167 @@ a {
 
 a:hover {
 	color: #2f2419;
+}
+
+.projects-page {
+	position: relative;
+	color: #edf5ff;
+	background:
+		radial-gradient(circle at 16% 8%, rgba(255, 255, 255, 0.45), transparent 23%),
+		radial-gradient(circle at 82% 10%, rgba(188, 222, 255, 0.4), transparent 27%),
+		linear-gradient(140deg, #8a96a6 0%, #4a5567 16%, #bcc7d2 33%, #5a6778 52%, #d5dee8 71%, #596779 100%);
+}
+
+.projects-page::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	background:
+		linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.2) 35%, rgba(185, 214, 255, 0.12) 46%, rgba(255, 210, 255, 0.1) 56%, transparent 72%);
+	mix-blend-mode: screen;
+	opacity: 0.72;
+	animation: chrome-sweep 7.5s linear infinite;
+}
+
+.projects-page::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+	background-size: 100% 3px;
+	opacity: 0.14;
+	mix-blend-mode: screen;
+}
+
+.projects-page .course-nav {
+	background: linear-gradient(180deg, rgba(243, 248, 255, 0.34), rgba(150, 164, 182, 0.24));
+	border-color: rgba(225, 238, 255, 0.55);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.85),
+		inset 0 -1px 0 rgba(79, 92, 109, 0.6),
+		0 14px 28px rgba(9, 13, 20, 0.45);
+	backdrop-filter: blur(8px);
+}
+
+.projects-page .course-nav a {
+	background: linear-gradient(180deg, rgba(252, 254, 255, 0.46), rgba(148, 167, 193, 0.26));
+	border-color: rgba(232, 245, 255, 0.62);
+	color: #f6fbff;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-size: 0.76rem;
+	font-family: "Arial Black", "Trebuchet MS", sans-serif;
+	text-shadow: 0 1px 10px rgba(177, 223, 255, 0.45);
+}
+
+.projects-page .page-header h1 {
+	color: #fcfeff;
+	font-family: "Orbitron", "Arial Black", "Trebuchet MS", sans-serif;
+	font-weight: 700;
+	border-bottom-color: rgba(217, 232, 248, 0.62);
+	text-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.9),
+		0 0 18px rgba(146, 201, 255, 0.35),
+		0 0 32px rgba(214, 170, 255, 0.18);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.projects-page details {
+	background: linear-gradient(160deg, rgba(247, 251, 255, 0.24), rgba(127, 146, 170, 0.22));
+	border: 1px solid rgba(220, 235, 250, 0.58);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.85),
+		inset 0 -1px 0 rgba(67, 80, 96, 0.65),
+		0 16px 34px rgba(9, 13, 20, 0.45);
+	backdrop-filter: blur(6px);
+}
+
+.projects-page summary {
+	color: #fbfeff;
+	font-family: "Orbitron", "Arial Black", "Trebuchet MS", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.09em;
+	font-size: 0.78rem;
+	text-shadow: 0 0 10px rgba(170, 222, 255, 0.28);
+}
+
+.projects-page summary span {
+	font-size: 0.8rem;
+}
+
+.projects-page summary strong {
+	color: #d3e7ff;
+	font-size: 0.74rem;
+}
+
+.projects-page details[open] > summary {
+	border-bottom-color: rgba(172, 194, 216, 0.35);
+}
+
+.projects-page .project {
+	background: linear-gradient(160deg, rgba(239, 247, 255, 0.22), rgba(112, 132, 156, 0.2));
+	border-color: rgba(207, 226, 246, 0.5);
+}
+
+.projects-page .project summary {
+	background: linear-gradient(180deg, rgba(250, 254, 255, 0.26), rgba(149, 170, 196, 0.18));
+	color: #f1f8ff;
+}
+
+.projects-page p,
+.projects-page figcaption {
+	color: #d7e4f1;
+	font-family: "Rajdhani", "Segoe UI", sans-serif;
+	font-size: 1.05rem;
+	line-height: 1.55;
+	letter-spacing: 0.015em;
+	text-shadow: 0 1px 1px rgba(17, 25, 35, 0.4);
+}
+
+.projects-page p {
+	color: #707c8a;
+	font-weight: 700;
+}
+
+.projects-page .project-body a {
+	font-family: "Rajdhani", "Segoe UI", sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+}
+
+.projects-page .photo-grid img,
+.projects-page .photo-grid video,
+.projects-page .project-body > img,
+.projects-page .project-body > video,
+.projects-page figure,
+.projects-page embed {
+	border-color: rgba(210, 229, 248, 0.62);
+	background: linear-gradient(180deg, rgba(236, 245, 255, 0.34), rgba(128, 149, 174, 0.2));
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.65),
+		inset 0 -1px 0 rgba(62, 75, 92, 0.5),
+		0 12px 20px rgba(8, 11, 17, 0.38);
+}
+
+.projects-page a {
+	color: #caf0ff;
+}
+
+.projects-page a:hover {
+	color: #f3faff;
+}
+
+@keyframes chrome-sweep {
+	0% {
+		transform: translateX(-25%);
+	}
+
+	100% {
+		transform: translateX(25%);
+	}
 }
 
 @media (max-width: 700px) {
